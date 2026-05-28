@@ -1,0 +1,31 @@
+Nutresa TI - Restore Test Report
+Fecha de prueba: 2026-05-18T10:15:30-05:00
+Servidor de prueba: nutresa-restore01.nutresa.corp
+Operador: tecnico.backups@nutresa.corp
+
+Resumen:
+- Objetivo: Verificar la capacidad de restauración desde /backups/daily/nutresa_data_2026-05-18.tar.gz
+- Resultado: ÉXITO
+
+Pasos realizados:
+1) Transferido archivo /backups/daily/nutresa_data_2026-05-18.tar.gz a nutresa-restore01
+2) Verificado SHA256 contra /backups/checksums/backup-2026-05-18.sha256 -> Coincide
+3) Descomprimido en /tmp/restore_test
+4) Verificados permisos y propietarios en /tmp/restore_test/etc/nginx (OK)
+5) Arrancado servicio mysql temporal apuntando al datadir restaurado (OK)
+
+Integridad de datos:
+- Archivos verificados (checksum parcial): /var/lib/mysql/ibdata1 (ok), /srv/www/index.html (ok)
+- Número de archivos restaurados: 1,243
+
+Tiempos:
+- Transferencia: 00:07:18
+- Descompresión: 00:05:12
+- Validación checksums: 00:00:45
+- Tiempo total de prueba: 00:13:15
+
+Observaciones:
+- Restauración completa en entorno de pruebas sin errores.
+- Recomendación: establecer pruebas de restore automatizadas mensuales y documentar RTO/RPO en runbook.
+
+Firma: Equipo Backup - Nutresa TI

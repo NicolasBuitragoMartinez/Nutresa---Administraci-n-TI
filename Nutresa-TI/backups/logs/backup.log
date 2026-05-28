@@ -1,0 +1,13 @@
+2026-05-18 02:00:00 - INFO  Starting daily backup run (script: /usr/local/bin/backup.sh)
+2026-05-18 02:00:01 - INFO  Source server: nutresa-app01.nutresa.corp
+2026-05-18 02:00:02 - INFO  Checking free space on /mnt/backup (LV: /dev/vg_nutresa/lv_backup)
+2026-05-18 02:00:02 - INFO  Filesystem size: 800G, used: 560G, available: 240G
+2026-05-18 02:00:05 - INFO  Snapshot created: /dev/vg_nutresa/lv_backup@backup-2026-05-18
+2026-05-18 02:05:12 - INFO  Compressing /srv/www /etc/nginx /var/lib/mysql -> /backups/daily/nutresa_data_2026-05-18.tar.gz
+2026-05-18 02:12:34 - INFO  Compression completed: 12.1G
+2026-05-18 02:12:35 - INFO  Calculating SHA256 for /backups/daily/nutresa_data_2026-05-18.tar.gz
+2026-05-18 02:12:36 - INFO  SHA256: 3f5b3e8b2d1c6f9a2e4b1c6d8f7a9c1e2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7  nutresa_data_2026-05-18.tar.gz
+2026-05-18 02:13:00 - INFO  Uploading backup to remote archive (sftp://archive.nutresa.corp/backups/weekly/)
+2026-05-18 02:20:02 - INFO  Remote upload completed successfully
+2026-05-18 02:20:03 - INFO  Removing snapshots older than 7 days
+2026-05-18 02:20:05 - INFO  Backup run completed successfully (duration: 00:20:05)

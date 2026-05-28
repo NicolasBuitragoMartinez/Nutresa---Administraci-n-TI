@@ -1,0 +1,96 @@
+Directorio de Soporte TI - Sede Regional Grupo Nutresa
+
+Equipo de Infraestructura y Soporte
+Administrador de Infraestructura:
+- Nombre: adminnutresa
+- Rol: Administrador de Plataforma TI
+- Extensión: 1001
+- Correo: adminnutresa@nutresa.com.co
+- Horario de atención: Lunes a Viernes, 08:00 - 18:00
+
+Equipo de Soporte Nivel 1:
+- Nombre: María Paula Torres
+- Rol: Analista de Soporte TI
+- Extensión: 1002
+- Correo: maria.paula.torres@nutresa.com.co
+- Horario de atención: Lunes a Viernes, 08:00 - 17:00
+
+- Nombre: Jorge Iván Salcedo
+- Rol: Soporte de Infraestructura
+- Extensión: 1003
+- Correo: jorge.ivan.salcedo@nutresa.com.co
+- Horario de atención: Lunes a Viernes, 09:00 - 18:00
+
+Equipo de Soporte Nivel 2:
+- Nombre: Daniela Ríos
+- Rol: Ingeniera de Redes y Seguridad
+- Extensión: 1004
+- Correo: daniela.rios@nutresa.com.co
+- Horario de atención: Lunes a Viernes, 08:00 - 18:00
+
+- Nombre: Ricardo Montes
+- Rol: Especialista en Base de Datos y Contenedores
+- Extensión: 1005
+- Correo: ricardo.montes@nutresa.com.co
+- Horario de atención: Lunes a Viernes, 08:00 - 19:00
+
+Horario de mantenimiento programado
+- Mantenimiento semanal: Sábado de 02:00 a 05:00
+- Ventanas de mantenimiento crítico: Último domingo de cada mes de 00:00 a 04:00
+- Mantenimiento preventivo RAID/LVM: Segundo sábado del mes de 03:00 a 06:00
+- Actualizaciones de seguridad de contenedores: Miércoles de 22:00 a 23:59
+
+Números de emergencia TI
+- Emergencia TI general: +57 1 800 123 4567
+- Soporte urgente Base de Datos: +57 1 800 123 4568
+- Atención incidentes Seguridad TI: +57 1 800 123 4569
+
+Procedimiento de escalamiento de incidentes
+Nivel 1 - Atención inicial:
+1. El usuario reporta el incidente a través de correo o ticket a `soporte-ti@nutresa.com.co`.
+2. María Paula Torres o Jorge Iván Salcedo reciben el reporte.
+3. Se realiza diagnóstico preliminar y se documenta el incidente.
+4. Se resuelven problemas de acceso a carpetas Samba, impresoras, red local y conmutación básica.
+
+Nivel 2 - Especialización técnica:
+1. Si el incidente no se resuelve en 30 minutos, se escala a Daniela Ríos o Ricardo Montes.
+2. Se realiza análisis de logs de Samba, estado de RAID, estado de contenedores Docker y firewall UFW.
+3. Se evalúan remedios avanzados como restauración de backup, reinicio de servicios Docker, validación de LVM y verificación de MySQL.
+
+Nivel 3 - Ingeniero de arquitectura y seguridad:
+1. Si el incidente presenta impacto crítico o no se resuelve en 2 horas, se escala al Administrador de Plataforma TI `adminnutresa`.
+2. Se involucra al responsable de Seguridad TI y a la Dirección Regional si es necesario.
+3. Se documenta la causa raíz, se ejecuta plan de contingencia y se notifican las áreas afectadas.
+
+SLAs de respuesta
+- Incidentes críticos (interrupción de servidor Samba, falla de RAID, pérdida de acceso de múltiples usuarios): respuesta en 30 minutos.
+- Incidentes altos (errores de autenticación, accesos lentos, contenedores Docker caídos): respuesta en 1 hora.
+- Incidentes medios (problemas de archivos corruptos, carpetas inaccesibles, permisos incorrectos): respuesta en 2 horas.
+- Incidentes bajos (consultas de configuración, dudas de acceso y solicitudes de cambio no urgente): respuesta en 1 día hábil.
+
+Escalamiento automático:
+- Si no hay respuesta del Nivel 1 en 30 minutos, el caso se asigna automáticamente a Nivel 2.
+- Si no hay resolución en 2 horas, el incidente se escala al Nivel 3.
+
+Contacto directo del equipo
+- Soporte presencial: Sala de operaciones TI, segundo piso, cubículo 3.
+- Chat interno de la sede: canal `#soporte-ti` en la intranet corporativa.
+- Correo de seguimiento: soporte-ti@nutresa.com.co
+- Registro de tickets: sistema interno de helpdesk con prioridad definida.
+
+Recomendaciones para usuarios
+- Siempre describa el problema con detalle, incluyendo nombre de usuario, carpeta afectada y hora del incidente.
+- Adjunte capturas de pantalla o mensajes de error cuando sea posible.
+- No intente reparar fallas de configuración avanzada sin autorización.
+- Mantenga su estación de trabajo actualizada y libre de software no autorizado.
+
+Procedimiento en caso de incidentes mayores
+1. Registrar el incidente en el sistema de tickets con prioridad alta.
+2. Notificar al nivel de supervisión de la sede y al responsable de Seguridad TI.
+3. Monitorear el estado del servidor y la red hasta la resolución.
+4. Realizar informe de incidente y actualizar la base de datos de lecciones aprendidas.
+
+Revisión y actualización de contactos
+- El directorio se actualiza trimestralmente.
+- Cualquier cambio de rol, extensión o correo debe comunicarse al Administrador de Plataforma TI.
+- Validación de horarios y disponibilidad se revisa cada primer día hábil del trimestre.

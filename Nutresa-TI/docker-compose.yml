@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+
+  nginx:
+    image: nginx:latest
+    container_name: nutresa-web
+    ports:
+      - "80:80"
+    volumes:
+      - ./web:/usr/share/nginx/html
+    restart: unless-stopped
+    networks:
+      - frontend
+
+  mysql:
+    image: mysql:8.0
+    container_name: nutresa-db
+    environment:
+      MYSQL_ROOT_PASSWORD: Nutresa2024
+      MYSQL_DATABASE: nutresa
+      MYSQL_USER: admindb
+      MYSQL_PASSWORD: Nutresa2024
+    volumes:
+      - ./database:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+    networks:
+      - backend
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: nutresa-phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - backend
+      - frontend
+
+  samba:
+    image: dperson/samba:latest
+    container_name: nutresa-samba
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - ./samba:/mount
+    command:
+        ["-u", "adminnutresa;Nutresa2026", "-s", "compartido;/mount;yes;no;no;adminnutresa", "-p"]
+    restart: unless-stopped
+    networks:
+      - backend
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: nutresa-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - frontend
+
+networks:
+  frontend:
+  backend:

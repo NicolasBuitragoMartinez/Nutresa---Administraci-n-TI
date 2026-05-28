@@ -1,0 +1,13 @@
+May 18 06:00:00 nutresa-monitor01 system-monitor[1024]: INFO  Starting daily monitoring run
+May 18 06:00:01 nutresa-monitor01 system-monitor[1024]: INFO  Checking CPU, RAM, Disk, RAID, LVM, Docker
+May 18 06:00:05 nutresa-monitor01 system-monitor[1024]: INFO  CPU load: 0.12,0.18,0.10
+May 18 06:12:01 nutresa-monitor01 system-monitor[1123]: WARNING CPU spike detected: 82.1% (process: php-fpm[2145])
+May 18 06:12:03 nutresa-monitor01 system-monitor[1123]: INFO  Triggering alert: /monitoring/alerts/alerts.log
+May 18 06:20:11 nutresa-monitor01 mdadm[1130]: INFO  /dev/md0 status: clean, resync not required
+May 18 07:05:33 nutresa-monitor01 docker-monitor[1201]: INFO  docker ps: 5 containers running: nutresa_nginx, nutresa_mysql, nutresa_phpmyadmin, nutresa_samba, nutresa_grafana
+May 18 07:05:34 nutresa-monitor01 docker-monitor[1201]: WARNING nutresa_mysql restart_count=4 (last: 2026-05-17T22:12:10)
+May 18 07:10:00 nutresa-monitor01 backup-check[1302]: INFO  Last backup found: /backups/daily/backup-2026-05-17.tar.gz (size 12G)
+May 18 07:10:01 nutresa-monitor01 backup-check[1302]: INFO  Backup integrity OK (manifest + checksum match)
+May 18 08:42:27 nutresa-monitor01 system-monitor[1123]: WARNING CPU sustained high: 78.4% for 00:02:10
+May 18 08:45:00 nutresa-monitor01 system-monitor[1123]: INFO  Collected metrics written to /monitoring/metrics/server_metrics.csv
+May 18 09:29:58 nutresa-monitor01 system-monitor[1024]: INFO  Daily monitoring run completed successfully

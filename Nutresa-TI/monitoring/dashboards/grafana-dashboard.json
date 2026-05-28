@@ -1,0 +1,49 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "nutresa-overview-2026-05-18",
+    "title": "Nutresa TI - Overview",
+    "timezone": "browser",
+    "schemaVersion": 27,
+    "version": 1,
+    "panels": [
+      {
+        "id": 1,
+        "title": "CPU Usage",
+        "type": "timeseries",
+        "datasource": "Prometheus",
+        "targets": [{ "expr": "node_cpu_seconds_total", "refId": "A" }]
+      },
+      {
+        "id": 2,
+        "title": "RAM Usage",
+        "type": "timeseries",
+        "datasource": "Prometheus",
+        "targets": [{ "expr": "node_memory_MemAvailable_bytes/node_memory_MemTotal_bytes", "refId": "A" }]
+      },
+      {
+        "id": 3,
+        "title": "Docker Containers",
+        "type": "stat",
+        "datasource": "Prometheus",
+        "targets": [{ "expr": "count(container_last_seen) by (container_label_com_docker_compose_service)", "refId": "A" }]
+      },
+      {
+        "id": 4,
+        "title": "RAID /dev/md0 Status",
+        "type": "text",
+        "options": { "content": "<pre>/dev/md0: RAID1 - clean - 2 devices\nLast resync: 2026-05-02 02:10:45</pre>", "mode": "html" }
+      },
+      {
+        "id": 5,
+        "title": "Disk Usage (LVM lv_backup)",
+        "type": "gauge",
+        "datasource": "Prometheus",
+        "targets": [{ "expr": "node_filesystem_avail_bytes{mountpoint=\"/mnt/backup\"}/node_filesystem_size_bytes{mountpoint=\"/mnt/backup\"}", "refId": "A" }]
+      }
+    ],
+    "templating": { "list": [] },
+    "annotations": { "list": [] }
+  },
+  "meta": { "type": "db", "canSave": true, "canEdit": true }
+}

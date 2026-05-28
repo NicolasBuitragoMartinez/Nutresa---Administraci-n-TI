@@ -1,0 +1,5 @@
+2026-05-11 02:00:05 - INFO  Rotation job started (script: /usr/local/bin/backup-rotate.sh)
+2026-05-11 02:00:06 - INFO  Deleting backup older than 7 days: /backups/daily/nutresa_data_2026-05-03.tar.gz
+2026-05-11 02:00:07 - INFO  Deletion completed, freed 11.8G
+2026-05-18 02:20:03 - INFO  Rotation job started (script: /usr/local/bin/backup-rotate.sh)
+2026-05-18 02:20:04 - INFO  No backups older than 7 days remaining on local archive

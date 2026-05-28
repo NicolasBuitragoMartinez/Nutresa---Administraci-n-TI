@@ -1,0 +1,46 @@
+Políticas de Tecnología de la Información - Grupo Nutresa
+
+1. Uso aceptable de sistemas
+El acceso a los sistemas y recursos de TI de la sede regional de Grupo Nutresa está limitado al personal autorizado. El uso de los servicios de Samba, servidores de archivos, bases de datos y aplicaciones contenidas en Docker debe estar alineado con los objetivos operativos de la organización. El uso personal de los recursos corporativos debe ser mínimo, no interferir con el desempeño y no debe comprometer la seguridad.
+
+2. Política de contraseñas
+Todas las cuentas de usuario deben utilizar contraseñas con al menos 12 caracteres. Las contraseñas deben incluir una combinación de letras mayúsculas, minúsculas, números y caracteres especiales. Las contraseñas no deben reutilizarse entre sistemas corporativos. La vigencia obligatoria es de 90 días, con un recordatorio activo 15 días antes del vencimiento.
+
+3. Política de backups y recuperación
+Los respaldos de la carpeta compartida Samba y los datos críticos de MySQL se realizan diariamente. El volumen lógico `lv_backup` ubicado en `/data` es el destino primario de los archivos de backup. Los archivos se retienen por 7 días en rotación estándar. Las copias se verifican mediante checksum SHA256 y se documentan en el registro de respaldo.
+
+4. Política de acceso remoto SSH
+El acceso remoto por SSH está restringido a cuentas administrativas y a la red de la sede regional. El usuario de administración primaria es `adminnutresa`. El acceso SSH a la máquina virtual Ubuntu Server 24.04 LTS se realiza mediante NAT port forwarding desde VirtualBox en el puerto 2222 del host. Queda prohibido el uso de autenticación con contraseña en la medida de lo posible; se prioriza autenticación con llave pública.
+
+5. Política de uso de recursos de red
+El tráfico de red interno para sistemas de producción debe priorizarse frente a tráficos de prueba o transferencia de archivos no autorizados. El uso de Samba para compartir archivos debe limitarse a documentos corporativos y a entregables relacionados con los departamentos de Tecnología e Infraestructura, RRHH, Logística, Ventas y Seguridad TI. Se deben evitar transferencias de archivos multimedia no relacionadas con las operaciones.
+
+6. Política de instalación de software
+La instalación de software en servidores corporativos debe ser aprobada por el equipo de Tecnología e Infraestructura. Solo personal autorizado puede instalar o actualizar componentes en Docker, en el servidor Ubuntu o en los servicios de Samba. Las imágenes Docker deben provenir de repositorios confiables y se requiere revisión previa de versiones y vulnerabilidades.
+
+7. Política de incidentes de seguridad
+Cualquier evento de seguridad, incluyendo accesos no autorizados, archivos sospechosos, respaldo fallido o fallo de RAID, debe reportarse inmediatamente. El personal debe seguir el procedimiento de escalamiento definido en el documento de contactos y registrar el incidente en la bitácora de seguridad.
+
+8. Consecuencias por incumplimiento
+El incumplimiento de estas políticas puede derivar en suspensión temporal del acceso a los recursos, investigación interna y medidas correctivas. Los empleados que generen incidentes por negligencia o uso indebido pueden ser sujetos a acciones disciplinarias según los lineamientos de la sede regional y Grupo Nutresa.
+
+9. Firma y vigencia
+Documento aprobado por la Gerencia Regional de TI y el Administrador de Infraestructura, `adminnutresa`. Vigencia inicial: 18 de mayo de 2026.
+
+10. Observaciones adicionales
+Se recomienda actualizar estas políticas anualmente o cuando se presenten cambios significativos en la infraestructura. El contenido debe revisarse en conjunto con el área de Seguridad TI y el equipo de Operaciones para mantener la alineación con los requisitos regulatorios y de cumplimiento.
+
+11. Responsabilidades específicas
+El departamento de Seguridad TI es responsable de la supervisión del cumplimiento y del análisis de incidentes. El departamento de Tecnología e Infraestructura es responsable de los respaldos, monitoreo y mantenimiento de RAID/LVM. RRHH debe coordinar el acceso de personal y la revocación de cuentas cuando haya cambios de personal.
+
+12. Alcance de la política
+Esta política aplica a todos los empleados y contratistas que utilicen la infraestructura TI de Grupo Nutresa en la sede regional, incluidos los servicios de Docker, Nginx, MySQL, Samba y Grafana.
+
+13. Actualizaciones y revisión
+Las actualizaciones de esta política serán comunicadas por correo interno y mediante el repositorio de documentación corporativa. La revisión formal se realizará cada 12 meses o cuando la infraestructura cambie.
+
+14. Protección de datos
+Todo archivo almacenado en los recursos compartidos debe cumplir con los lineamientos de confidencialidad y clasificación de datos de Grupo Nutresa. Los datos personales y sensibles deben almacenarse únicamente cuando sea estrictamente necesario y con los controles apropiados.
+
+15. Auditoría y control
+Los registros de acceso, logs de Samba y logs de backup deben ser revisados periódicamente por el equipo de Seguridad TI. Cualquier anomalía detectada en los backups o en la disponibilidad de los recursos debe generar una acción correctiva inmediata.

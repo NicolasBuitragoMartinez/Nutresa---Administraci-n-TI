@@ -1,0 +1,7 @@
+2026-05-18T06:12:02-05:00 WARNING [CPU] nutresa-monitor01 - CPU usage exceeded threshold: 82.1% (process: php-fpm[2145])
+2026-05-18T06:12:02-05:00 INFO    [ALERT] Created incident ticket: INC-20260518-0001 (assigned: oncall@nutresa.corp)
+2026-05-18T07:05:34-05:00 WARNING [DOCKER] nutresa-monitor01 - Container nutresa_mysql restart count increased to 4
+2026-05-18T07:10:01-05:00 INFO    [BACKUP] nutresa-backup01 - Last successful backup verified: 2026-05-17T02:10:01
+2026-05-18T08:42:27-05:00 WARNING [CPU] nutresa-monitor01 - Sustained high CPU for 2m10s: average 78.4%
+2026-05-18T09:00:00-05:00 INFO    [MAINT] nutresa-monitor01 - Planned maintenance window tomorrow 2026-05-19 02:00-04:00
+2026-05-18T09:05:12-05:00 CRITICAL [RAID] nutresa-monitor01 - Drive /dev/sdb1 reported I/O errors; mdadm user informed

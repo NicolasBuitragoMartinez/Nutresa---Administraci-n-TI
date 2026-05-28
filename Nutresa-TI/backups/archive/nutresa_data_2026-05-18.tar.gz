@@ -1,0 +1,13 @@
+SIMULATED-ARCHIVE: nutresa_data_2026-05-18.tar.gz
+This file is a simulated placeholder representing the compressed backup archive produced on 2026-05-18.
+Contents (listing):
+- srv/www/index.html (4.2G)
+- var/lib/mysql/ibdata1 (5.8G)
+- var/lib/mysql/mysql/ (0.7G)
+- etc/nginx/nginx.conf (12K)
+- etc/samba/smb.conf (3K)
+
+SHA256: 3f5b3e8b2d1c6f9a2e4b1c6d8f7a9c1e2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7
+Created: 2026-05-18T02:12:36-05:00
+Origin LV: /dev/vg_nutresa/lv_backup
+Note: Binary archive content omitted in repository for size. Use production backup server to retrieve full archive.
